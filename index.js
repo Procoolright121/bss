@@ -520,7 +520,7 @@ function BeeSwarmSimulator(DATA){
         {item:'glue',req:[['gumdrops',10],['royalJelly',5]]},
         {item:'tropicalDrink',req:[['coconut',5],['oil',1],['enzymes',1]]},
         {item:'glitter',req:[['moonCharm',5],['magicBean',1]]},
-        {item:'starJelly',req:[['royalJelly',75],['glitter',3]]},
+        {item:'starJelly',req:[['royalJelly',5]},
         {item:'purplePotion',req:[['neonberry',3],['redExtract',1],['blueExtract',1],['glue',1]]},
         {item:'superSmoothie',req:[['neonberry',3],['starJelly',1],['purplePotion',1],['tropicalDrink',2]]},
         {item:'fieldDice',req:[['softWax',1],['whirligig',1],['redExtract',1],['blueExtract',1]]},
@@ -531,7 +531,8 @@ function BeeSwarmSimulator(DATA){
         {item:'swirledWax',req:[['hardWax',1],['softWax',2],['purplePotion',1],['royalJelly',15]]},
         {item:'causticWax',req:[['hardWax',2],['neonberry',5],['gumdrops',10],['royalJelly',25]]},
         {item:'turpentine',req:[['superSmoothie',3],['causticWax',3],['starJelly',5],['honeysuckle',50]]},
-        {item:'diamondEgg',req:[['goldEgg',1],['swirledWax',1],['royalJelly',100]]},
+        {item:'diamondEgg',req:['royalJelly',10]},
+        {item:'magicbean' ,req [1 gumdrops]
 
     ],windShrineDonations=[
 
