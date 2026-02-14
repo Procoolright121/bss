@@ -1832,11 +1832,11 @@ function BeeSwarmSimulator(DATA){
 
             },minX:-8.5-3,maxX:-8.5+3,minY:12,maxY:18,minZ:-40-3,maxZ:-40+3,message:'Combine 2,500 gumdrops to form a Gummy Bee',func:function(player){
 
-                items.gumdrops.amount-=2500
+                items.gumdrops.amount-=2
                 items.gummyBeeEgg.amount++
                 player.updateInventory()
                 player.addMessage('🎉 You formed a Gummy Bee! 🎉',[210,30,210])
-                player.addMessage('-2,500 Gumdrops')
+                player.addMessage('-2 Gumdrops')
                 player.addMessage('+1 Gummy Bee Egg')
 
             }
