@@ -1828,7 +1828,7 @@ function BeeSwarmSimulator(DATA){
             isMachine:true,requirements:function(player){
 
                 if(items.gummyBeeEgg.amount) return 'You already own a Gummy Bee!'
-                if(items.gumdrops.amount<1500) return 'You need 2,500 gumdrops to form a Gummy Bee!'
+                if(items.gumdrops.amount<15)turn 'You need 2,500 gumdrops to form a Gummy Bee!'
 
             },minX:-8.5-3,maxX:-8.5+3,minY:12,maxY:18,minZ:-40-3,maxZ:-40+3,message:'Combine 2,500 gumdrops to form a Gummy Bee',func:function(player){
 
@@ -1847,7 +1847,7 @@ function BeeSwarmSimulator(DATA){
             isMachine:true,requirements:function(player){
 
                 if(items.viciousBeeEgg.amount) return 'You already own a Vicious Bee!'
-                if(items.stinger.amount<200) return 'Turn in 200 stingers to claim a Vicious Bee!'
+                if(items.stinger.amount<2) return 'Turn in 200 stingers to claim a Vicious Bee!'
 
             },minX:2-3,maxX:2+3,minY:2,maxY:9,minZ:60-3,maxZ:60+3,message:'Turn in 200 stingers to claim a Vicious Bee',func:function(player){
 
@@ -1855,7 +1855,7 @@ function BeeSwarmSimulator(DATA){
                 items.viciousBeeEgg.amount++
                 player.updateInventory()
                 player.addMessage('🎉 You claimed a Vicious Bee! 🎉',[0,0,0])
-                player.addMessage('-200 Stingers')
+                player.addMessage('-2 Stingers')
                 player.addMessage('+1 Vicious Bee Egg')
             }
         },
@@ -1882,7 +1882,7 @@ function BeeSwarmSimulator(DATA){
 
                 f=f[(Math.random()*f.length)|0]
 
-                let type=['rare','epic','gummy','legendary','supreme']
+                let type=['supreme']
 
                 type=type[(Math.pow(Math.random(),3)*Math.pow(Math.random(),3)*type.length)|0]
 
@@ -1910,7 +1910,7 @@ function BeeSwarmSimulator(DATA){
 
                 player.extraInfo.fieldBooster=Math.ceil(Date.now())
 
-                let f=['3SunflowerField','3DandelionField','2SpiderField','2CloverField','2PineapplePatch','1PumpkinPatch','1CactusField']
+                let f=['3sunflowerField','3DandelionField','2SpiderField','2CloverField','2PineapplePatch','1PumpkinPatch','1CactusField', '100PineTreeForest']
 
                 f=f[(Math.random()*f.length)|0]
                 let am=f[0]
@@ -1964,7 +1964,7 @@ function BeeSwarmSimulator(DATA){
                 
                 player.extraInfo.blueFieldBooster=Math.ceil(Date.now())
 
-                let f=['3BlueFlowerField','2BambooField','1PineTreeForest']
+                let f=['100PineTreeForest']
 
                 f=f[(Math.random()*f.length)|0]
                 let am=f[0]
@@ -5914,8 +5914,8 @@ function BeeSwarmSimulator(DATA){
             
             update:(amount,player)=>{
                 
-                player.beeAttack*=1.25
-                player.defense=1
+                player.beeAttack*=10
+                player.defense=100
             },
             
             getMessage:(amount)=>{
@@ -9254,7 +9254,7 @@ function BeeSwarmSimulator(DATA){
             amount:0,u:128*5/2048,v:128*5/2048,value:90,
             use:function(){
                 
-                let types={mythic:1/4000,legendary:0.075-(1/4000),epic:0.325,rare:0.6},r=Math.random(),type,c=0
+                let types={mythic:1/40,legendary:0.075-(1/40),epic:0.325,rare:0.6},r=Math.random(),type,c=0
                 
                 for(let i in types){
                     
@@ -9348,7 +9348,7 @@ function BeeSwarmSimulator(DATA){
             amount:0,u:128*7/2048,v:128*5/2048,value:200,
             use:function(){
                 
-                let types={mythic:0.05,legendary:0.95},r=Math.random(),type,c=0
+                let types={mythic:0.50,legendary:0.50},r=Math.random(),type,c=0
                 
                 for(let i in types){
                     
@@ -9718,7 +9718,7 @@ function BeeSwarmSimulator(DATA){
                 
                 while((max--)>=0&&(items.starJelly.amount--)>=0){
 
-                    let types={mythic:1/4000,legendary:0.075-(1/4000),epic:0.325,rare:0.6},r=Math.random(),type,c=0
+                    let types={mythic:1/40,legendary:0.075-(1/40),epic:0.325,rare:0.6},r=Math.random(),type,c=0
                     
                     for(let i in types){
                         
